@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://hxaqiyo747dp"]
+
+[ext_resource type="Script" path="res://Scripts/Weapon.gd" id="1_tuqhd"]
+[ext_resource type="Resource" uid="uid://dwvi7nx7p8q6l" path="res://Resources/Weapons/iron_sword.tres" id="2_fy110"]
+
+[node name="Weapon" type="Node2D"]
+script = ExtResource("1_tuqhd")
+weapon_res = ExtResource("2_fy110")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

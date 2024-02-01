@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="WeaponTemplate" load_steps=2 format=3 uid="uid://2oj5pudxw87a"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/WeaponTemplate.gd" id="1_7qebo"]
+
+[resource]
+script = ExtResource("1_7qebo")
+type = "Axe"
+name = "Iron Axe"
+map_range = 1
+base_damage = 9
+element = "None"
+crit_hit_chance = 2.8
+crit_damage_mult = 1.5
+max_durability = 130

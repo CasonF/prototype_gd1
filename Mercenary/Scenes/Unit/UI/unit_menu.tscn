@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1moy44cj0pcn"]
+
+[ext_resource type="Script" path="res://Scripts/UI/Unit/SelectMove.gd" id="1_voc4g"]
+[ext_resource type="Script" path="res://Scripts/UI/Unit/SelectAttack.gd" id="2_nyke1"]
+[ext_resource type="Script" path="res://Scripts/UI/Unit/SelectItems.gd" id="3_d08qy"]
+[ext_resource type="Script" path="res://Scripts/UI/Unit/SelectEndTurn.gd" id="4_22sxe"]
+
+[node name="UnitMenu" type="Panel"]
+offset_left = -39.0
+offset_top = -65.0
+offset_right = 39.0
+offset_bottom = 65.0
+
+[node name="SelectMove" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 78.0
+offset_bottom = 31.0
+text = "Move"
+script = ExtResource("1_voc4g")
+
+[node name="SelectAttack" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.254
+anchor_bottom = 0.254
+offset_top = -0.0200005
+offset_right = 78.0
+offset_bottom = 30.98
+text = "Attack"
+script = ExtResource("2_nyke1")
+
+[node name="SelectItems" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.746
+anchor_bottom = 0.746
+offset_top = -30.98
+offset_right = 78.0
+offset_bottom = 0.0199966
+text = "Items"
+script = ExtResource("3_d08qy")
+
+[node name="SelectEndTurn" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -30.888
+offset_right = 76.0
+offset_bottom = 0.112
+text = "End Turn"
+script = ExtResource("4_22sxe")

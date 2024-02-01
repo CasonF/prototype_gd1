@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="UnitTemplate" load_steps=2 format=3 uid="uid://74n6bdnp8xen"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/UnitTemplate.gd" id="1_qrj5i"]
+
+[resource]
+script = ExtResource("1_qrj5i")
+sprite_folder_file_path = "res://Assets/Board Sprites/Example Char/"
+type = "Fighter"
+name = "Example Character"
+move_range = 5
+attack_range = 1
+base_str = 15
+base_dex = 13
+base_con = 12
+base_int = 10
+base_wis = 9
+base_cha = 11
+base_luk = 11
+map_ability_1 = 1
+map_ability_1_is_bonus_action = true
+map_ability_2 = 2
+map_ability_2_is_bonus_action = true
+combat_ability_1 = 2
+combat_ability_1_bonus_chance = 10.0
+combat_ability_2 = 3
+combat_ability_2_bonus_chance = 5.5

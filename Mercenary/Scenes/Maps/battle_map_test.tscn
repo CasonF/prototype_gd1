@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://csio1ow3i12c1"]
+
+[ext_resource type="PackedScene" uid="uid://dy2jh2jtmniqi" path="res://Scenes/unit.tscn" id="1_m4uq6"]
+[ext_resource type="Script" path="res://Scripts/GameBoard.gd" id="1_rw8wa"]
+[ext_resource type="PackedScene" uid="uid://dbw7k6aacnyuu" path="res://Scenes/cursor.tscn" id="2_apj5m"]
+[ext_resource type="PackedScene" uid="uid://cnfea8l84wuuj" path="res://Scenes/unit_overlay.tscn" id="3_gh8j3"]
+[ext_resource type="PackedScene" uid="uid://c0tm6sipwm47q" path="res://Scenes/unit_path.tscn" id="3_nuucw"]
+[ext_resource type="Resource" uid="uid://lxpsshd806aw" path="res://Resources/grid_basic.tres" id="3_sapoi"]
+[ext_resource type="Resource" uid="uid://74n6bdnp8xen" path="res://Resources/Units/example_char.tres" id="6_5m4he"]
+[ext_resource type="PackedScene" uid="uid://kk11ndt32ktc" path="res://Scenes/Unit/UI/unit_descript_menu.tscn" id="8_8or8c"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_rw8wa")
+grid = ExtResource("3_sapoi")
+
+[node name="UnitPath" parent="." instance=ExtResource("3_nuucw")]
+visible = false
+
+[node name="UnitOverlay" parent="." instance=ExtResource("3_gh8j3")]
+
+[node name="Units" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Unit" parent="Units" instance=ExtResource("1_m4uq6")]
+position = Vector2(272, 284)
+attack_distance = 3
+unit_data = ExtResource("6_5m4he")
+NAME = "Greg"
+LEVEL = 3
+unit_team = 1
+is_npc_unit = true
+AI_TARGET = "ATTACK_RANGE"
+
+[node name="Unit2" parent="Units" instance=ExtResource("1_m4uq6")]
+position = Vector2(665, 411)
+attack_type = "RANGE"
+attack_distance = 2
+unit_data = ExtResource("6_5m4he")
+NAME = "Marcus"
+LEVEL = 5
+
+[node name="DeadUnits" type="Node2D" parent="."]
+visible = false
+
+[node name="Cursor" parent="." instance=ExtResource("2_apj5m")]
+
+[node name="UnitDescriptMenu" parent="." instance=ExtResource("8_8or8c")]
+visible = false
+offset_left = 852.0
+offset_top = 551.0
+offset_right = 1152.0
+offset_bottom = 647.0
+
+[connection signal="accept_pressed" from="Cursor" to="." method="_on_cursor_accept_pressed"]
+[connection signal="moved" from="Cursor" to="." method="_on_cursor_moved"]

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="WeaponTemplate" load_steps=2 format=3 uid="uid://xnk4b5jtplm1"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/WeaponTemplate.gd" id="1_2c686"]
+
+[resource]
+script = ExtResource("1_2c686")
+type = "Book"
+name = "Flamecraft"
+map_range = 1
+base_damage = 10
+element = "Fire"
+crit_hit_chance = 3.3
+crit_damage_mult = 1.6
+max_durability = 75

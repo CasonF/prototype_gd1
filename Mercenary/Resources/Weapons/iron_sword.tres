@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="WeaponTemplate" load_steps=3 format=3 uid="uid://dwvi7nx7p8q6l"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/WeaponTemplate.gd" id="1_8alpi"]
+[ext_resource type="Texture2D" uid="uid://dvv37r3mfk8eh" path="res://sword_examples.png" id="2_lfcak"]
+
+[resource]
+script = ExtResource("1_8alpi")
+weapon_sprite = ExtResource("2_lfcak")
+type = "Sword"
+name = "Iron Sword"
+map_range = 1
+base_damage = 7
+element = "None"
+crit_hit_chance = 3.3
+crit_damage_mult = 1.7
+max_durability = 120

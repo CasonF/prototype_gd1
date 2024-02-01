@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="WeaponTemplate" load_steps=2 format=3 uid="uid://bs2laj5eqhfrq"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Scripts/WeaponTemplate.gd" id="1_7fppe"]
+
+[resource]
+script = ExtResource("1_7fppe")
+type = "Bow"
+name = "Shortbow"
+map_range = 2
+base_damage = 3
+element = "None"
+crit_hit_chance = 4.0
+crit_damage_mult = 1.25
+max_durability = 200

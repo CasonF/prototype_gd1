@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0tm6sipwm47q"]
+
+[ext_resource type="TileSet" uid="uid://dqg14aj86so4a" path="res://Resources/unit_path_tileset.tres" id="1_hxlsw"]
+[ext_resource type="Script" path="res://Scripts/UnitPath.gd" id="2_abifk"]
+[ext_resource type="Resource" uid="uid://lxpsshd806aw" path="res://Resources/grid_basic.tres" id="3_1nfva"]
+
+[node name="UnitPath" type="TileMap"]
+tile_set = ExtResource("1_hxlsw")
+format = 2
+layer_0/y_sort_enabled = true
+script = ExtResource("2_abifk")
+grid = ExtResource("3_1nfva")

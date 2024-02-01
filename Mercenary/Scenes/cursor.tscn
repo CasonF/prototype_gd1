@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbw7k6aacnyuu"]
+
+[ext_resource type="Script" path="res://Scripts/Cursor.gd" id="1_x4quj"]
+[ext_resource type="Texture2D" uid="uid://3pxvv3bfapbq" path="res://Assets/sword-icon.png" id="2_6gfaa"]
+[ext_resource type="Resource" uid="uid://lxpsshd806aw" path="res://Resources/grid_basic.tres" id="2_af8cn"]
+
+[node name="Cursor" type="Node2D"]
+script = ExtResource("1_x4quj")
+grid = ExtResource("2_af8cn")
+
+[node name="UnitImage" type="Sprite2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.392157)
+self_modulate = Color(1, 1, 1, 0.392157)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.227332, 0.506792, 0.853823, 0.607843)
+position = Vector2(70, -70)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_6gfaa")
+flip_h = true
+flip_v = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
